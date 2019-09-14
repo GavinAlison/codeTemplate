@@ -16,7 +16,8 @@ public class IconRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        File[] files = new File("D:\\icon").listFiles((dir, name) -> name.substring(name.lastIndexOf(".")).equals(".png"));
+        File[] files = new File("D:\\icon").listFiles((dir, name) ->
+                name.substring(name.lastIndexOf(".")).equals(".png"));
         if (files == null || files.length == 0) {
             return;
         }

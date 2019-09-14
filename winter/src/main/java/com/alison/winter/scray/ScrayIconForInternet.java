@@ -14,7 +14,7 @@ import java.util.Date;
  * @author huangyong
  * @version: 0.1
  **/
-public class scrayIconForInternet {
+public class ScrayIconForInternet {
     @Test
     public void saveIcon() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
@@ -26,7 +26,8 @@ public class scrayIconForInternet {
         String querySql = "select * from app where name = ?";
         String saveSql = "insert into app(icon, name, create_time, update_time)  values(?,?,?,?)";
 
-        File[] files = new File("D:\\icon1").listFiles((dir, name) -> name.substring(name.lastIndexOf(".")).equals(".png"));
+        File[] files = new File("D:\\icon1").listFiles((dir, name)
+                -> name.substring(name.lastIndexOf(".")).equals(".png"));
         if (files == null || files.length == 0) {
             return;
         }
