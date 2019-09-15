@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: sms
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: redis
+    timeout: 5000
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+      shutdown-timeout: 100
+server:
+  port: 8080
+  servlet:
+    context-path: /sms
+yunpian:
+  product: yunpian
+  desc: 云片短信
+  auth:
+    apikey: WTJSbVl6bGxOV0ptT0dRd05XTTFaV0U0WTJNNU5EQmlNemhoTnpVNU5qRT0=
+  send:
+    sms:
+      api: https://sms.yunpian.com/v1/sms/send.json
+ucp:
+  product: ucp
+  desc: 云之讯
+  sendsms: https://open.ucpaas.com/ol/sms/sendsms
+  auth:
+    app-id: WlRVME1HSTJOVFJpTkRneE5EVXlORGxpTXpaalpEVmpaamN4TldVMlpHVT0=
+    sid: WmpFd05XRXpNbVJqWkRoaVl6TTJPR1ptWm1JMFlqSTFNREZqT1dNMFlXTT0=
+    token: TVRBeVlXUTNZbU13WWprelkyTTRPVGsyTTJGa05XWm1NR000TnpBM04yRT0=
+  payloads:
+    templated: 310246
+    verfication-code-len: 6
+    verfication-code: 123456
+    expire-time: 20
+#    params: 123456,20
+rest:
+  read-timeout: 2000
+  connect-timeout: 2000
+#mobile: +8616571296540
+mobile: +8615711320691
